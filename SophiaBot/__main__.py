@@ -102,7 +102,7 @@ HELP_STRINGS = """
 Every possibility of Sophia is documentated here
 Click buttons to get help
 """
-TOKISAKI_IMG = "https://telegra.ph/file/4f77c588a3951cf76baec.jpg"
+TOKISAKI_IMG = "https://telegra.ph/file/d77d1b4706be2466efd1b.jpg"
 
 DONATE_STRING = """ Heya, glad to hear you want to donate!
 Click here to donate in [Paypal](https://t.me/aceduke_sinx) """
