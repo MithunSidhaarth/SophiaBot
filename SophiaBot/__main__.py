@@ -76,12 +76,6 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """Hey there 👋! My name is *Sophia*.\n\nI can help manage your groups with useful features, feel free to add me to your groups!."""
 
-STICKERS = (
-      "CAACAgUAAx0CTpRfGwACF41hMfagTfWdHNFici1VtOCQVVNYmgACgh8AAsZRxhU6tKJa_ySnnCAE",
-      "CAACAgUAAx0CTpRfGwACF5phMfi5vgKwQFg6KuzHiEc79QFT0QACCR4AAsZRxhVu32VqEb3_1SAE",
-      "CAACAgUAAx0CTpRfGwACGIBhQcGJDHuuXsU5el3I86SEx3nTpgAC2R8AAsZRxhUpEe6EcVukQCAE",
-)    
-
 
 buttons = [
     [
@@ -108,8 +102,10 @@ HELP_STRINGS = """
 Every possibility of Sophia is documentated here
 Click buttons to get help
 """
+TOKISAKI_IMG = "https://telegra.ph/file/4f77c588a3951cf76baec.jpg"
 
-DONATE_STRING = """ @dihanofficial """
+DONATE_STRING = """ Heya, glad to hear you want to donate!
+Click here to donate in [Paypal](https://t.me/aceduke_sinx) """
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -211,10 +207,9 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_sticker(
-                random.choice(STICKERS),
-                timeout=60,
-            )
+            update.effective_message.reply_photo(
+                TOKISAKI_IMG,
+               )
             update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
